@@ -5,11 +5,11 @@ import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 @Component({
     standalone: true,
     imports: [FontAwesomeModule],
-    templateUrl: './navbar.component.html',
-    selector: 'app-navbar'
+    templateUrl: './header.component.html',
+    selector: 'app-header'
 })
 
-export default class NavbarComponent
+export default class HeaderComponent
 {
     public iconArray = [faLinkedin,faGithub,faInstagram]
     public onNavOptionClick(icon:any) {
