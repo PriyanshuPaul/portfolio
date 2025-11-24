@@ -1,31 +1,31 @@
-<section
-  class="flex flex-col sm:flex-row sm:justify-between sm:items-stretch sm:mt-20 text-slate-50"
->
-  <div class="flex sm:w-1/2 flex-col">
-    <h2
-      class="text-4xl mt-6 lg:text-6xl xl:text-8xl font-bold tracking-tighter bg-gradient-to-r"
-    >
-      PRIYANSHU PAUL
-    </h2>
-    <h3
-      class="mt-6 text-2xl lg:text-4xl tracking-tight bg-gradient-to-r from-pink-400 via-slate-400 to-violet-900 bg-clip-text text-transparent"
-    >
-      FULL STACK DEVELOPER
-    </h3>
-    <p class="mt-4 text-xs lg:text-base break-words rounded-lg italic">
-      "I’m a passionate full-stack developer from India.I specialize in creating
-      beautiful, responsive, and user-friendly websites using modern
-      technologies like HTML, CSS, JavaScript,Node JS and frameworks like
-      Angular and React."
-    </p>
-  </div>
-  <div class="w-96 max-h-full mt-10 sm:mt-0">
-    <div class="flex justify-center">
-      <img
-        [src]="imagePath"
-        alt="Profile Image"
-        class="object-center xl:rounded-full xl:filter xl:grayscale xl:hover:grayscale-0 transition duration-300 cursor-pointer hover:scale-110"
-      />
+<section id="hero"
+    class="relative bg-muted-red w-full min-h-screen flex items-center justify-center text-white overflow-hidden grainy">
+    <div class="absolute w-72 h-72 border-2 border-white/10 top-20 left-10 animate-spin-slow"></div>
+    <div class="absolute w-48 h-48 border border-white/10 bottom-10 right-20 animate-pulse"></div>
+
+    <div class="container mx-auto px-6 z-10 grid md:grid-cols-2 gap-10 items-center">
+        <div class="text-center md:text-left">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter">
+                Priyanshu Paul
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-white/80 tracking-wide">
+                Crafting Elegant & Performant Web Experiences with Angular.
+            </p>
+            <a href="#contact"
+                class="inline-block mt-10 px-8 py-3 border border-white/50 text-white hover:bg-white hover:text-red-400 transition-all duration-300 ease-in-out">
+                GET IN TOUCH
+            </a>
+        </div>
+
+        <div class="hidden md:block bg-black/50 backdrop-blur-sm border border-white/10 p-4 shadow-2xl">
+            <div class="flex items-center space-x-1.5 p-2 border-b border-white/10">
+                <div class="w-3 h-3 bg-red-500"></div>
+                <div class="w-3 h-3 bg-yellow-500"></div>
+                <div class="w-3 h-3 bg-green-500"></div>
+                <span class="text-xs text-white/50 ml-auto">portfolio-hero.component.ts</span>
+            </div>
+            <pre
+                class="text-sm p-4 overflow-x-auto"><code class="language-typescript font-mono text-white/90">{{ displayedCode() }}<span class="blinking-cursor">|</span></code></pre>
+        </div>
     </div>
-  </div>
 </section>
