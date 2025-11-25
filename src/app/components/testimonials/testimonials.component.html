@@ -1,1 +1,58 @@
-<p>testimonials works!</p>
+<section id="testimonials" class="bg-off-white py-24 sm:py-32">
+    <div class="container mx-auto px-6">
+        <div class="text-center">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                What Others Say
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-dark-text/70">
+                Kind words from colleagues and clients I've had the pleasure to work with.
+            </p>
+        </div>
+
+        <div class="relative mt-16 max-w-3xl mx-auto">
+            <div class="overflow-hidden cursor-grab">
+                <div class="flex transition-transform duration-500 ease-in-out"
+                    [style.transform]="'translateX(-' + currentIndex() * 100 + '%)'">
+                    @for (testimonial of testimonials(); track testimonial.name) {
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div class="bg-white p-12 border border-dark-text/10 text-center">
+                            <p class="text-xl md:text-2xl italic text-dark-text/80 leading-relaxed">"{{
+                                testimonial.quote }}"</p>
+                            <div class="mt-8">
+                                <p class="text-lg font-bold text-muted-red">{{ testimonial.name }}</p>
+                                <p class="text-dark-text/60">{{ testimonial.title }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+
+            <button (click)="prev()"
+                class="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 p-2 border border-muted-red/30 hover:bg-muted-red hover:text-white transition-all duration-300"
+                aria-label="Previous testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button (click)="next()"
+                class="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 p-2 border border-muted-red/30 hover:bg-muted-red hover:text-white transition-all duration-300"
+                aria-label="Next testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+
+            <div class="flex justify-center space-x-3 mt-8">
+                @for (testimonial of testimonials(); track testimonial.name; let i = $index) {
+                <button (click)="selectTestimonial(i)"
+                    class="w-3 h-3 border border-muted-red transition-colors duration-300"
+                    [class.bg-muted-red]="currentIndex() === i">
+                </button>
+                }
+            </div>
+        </div>
+    </div>
+</section>

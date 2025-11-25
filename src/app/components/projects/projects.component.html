@@ -1,1 +1,30 @@
-<p>projects works!</p>
+<section id="projects" class="bg-muted-red/5 py-24 sm:py-32">
+    <div class="container mx-auto px-6">
+        <div class="text-center">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                Featured Work
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-dark-text/70">
+                A selection of projects that showcase my expertise and passion.
+            </p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @for(project of projects(); track project.title) {
+            <div
+                class="group bg-off-white border border-muted-red/20 transition-all duration-300 hover:border-darker-red hover:-translate-y-2 hover:shadow-2xl">
+                <div class="overflow-hidden">
+                    <img [src]="project.imageUrl" alt="{{ project.title }}"
+                        class="w-full h-56 object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-dark-text">{{ project.title }}</h3>
+                    <p class="mt-2 text-dark-text/70 leading-relaxed">{{ project.description }}</p>
+                    <div class="w-16 h-px bg-muted-red/30 my-4"></div>
+                    <p class="text-sm font-semibold text-muted-red tracking-wider uppercase">{{ project.tech }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
