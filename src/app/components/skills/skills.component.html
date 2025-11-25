@@ -1,1 +1,32 @@
-<p>skills works!</p>
+<section id="skills" class="bg-off-white py-24 sm:py-32">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+            Core Technologies
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-dark-text/70">
+            My toolkit for building modern, robust, and scalable web applications.
+        </p>
+    </div>
+    <div class="mt-16 w-full overflow-hidden"
+        style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent)">
+        <div class="scroller-inner flex w-max space-x-12">
+            <!-- Render list twice for a seamless loop -->
+            @for(skill of skills(); track skill.name + '1') {
+            <div class="flex flex-col items-center justify-center flex-shrink-0 w-36">
+                <div class="w-16 h-16 text-muted-red/70 transition-colors duration-300 hover:text-muted-red"
+                    [innerHTML]="skill.icon"></div>
+                <h3 class="mt-4 text-lg font-semibold tracking-wide text-dark-text/80 transition-colors duration-300">{{
+                    skill.name }}</h3>
+            </div>
+            }
+            @for(skill of skills(); track skill.name + '2') {
+            <div class="flex flex-col items-center justify-center flex-shrink-0 w-36">
+                <div class="w-16 h-16 text-muted-red/70 transition-colors duration-300 hover:text-muted-red"
+                    [innerHTML]="skill.icon"></div>
+                <h3 class="mt-4 text-lg font-semibold tracking-wide text-dark-text/80 transition-colors duration-300">{{
+                    skill.name }}</h3>
+            </div>
+            }
+        </div>
+    </div>
+</section>

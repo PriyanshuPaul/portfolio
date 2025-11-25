@@ -1,1 +1,50 @@
-<p>contact works!</p>
+<section id="contact" class="bg-muted-red text-white py-24 sm:py-32 grainy relative">
+    <div class="container mx-auto px-6 text-center z-10 relative">
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+            Let's Connect
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-white/80">
+            Have a project in mind or just want to say hello? Feel free to reach out.
+        </p>
+
+        <form class="max-w-xl mx-auto mt-12 text-left">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-white/80 mb-2">Name</label>
+                    <input type="text" id="name"
+                        class="w-full bg-off-white text-dark-text p-3 border border-white/30 focus:border-white placeholder:text-dark-text/60 outline-none transition-colors duration-300"
+                        placeholder="Your Name">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-white/80 mb-2">Email</label>
+                    <input type="email" id="email"
+                        class="w-full bg-off-white text-dark-text p-3 border border-white/30 focus:border-white placeholder:text-dark-text/60 outline-none transition-colors duration-300"
+                        placeholder="Your Email">
+                </div>
+            </div>
+            <div class="mt-6">
+                <label for="message" class="block text-sm font-medium text-white/80 mb-2">Message</label>
+                <textarea id="message" rows="5"
+                    class="w-full bg-off-white text-dark-text p-3 border border-white/30 focus:border-white placeholder:text-dark-text/60 outline-none transition-colors duration-300"
+                    placeholder="Your Message"></textarea>
+            </div>
+            <div class="mt-8 text-center">
+                <button type="submit"
+                    class="inline-block px-12 py-3 border border-white text-white hover:bg-white hover:text-muted-red transition-all duration-300 ease-in-out">
+                    SEND MESSAGE
+                </button>
+            </div>
+        </form>
+
+        <div class="mt-20">
+            <p class="text-white/60">Or find me on</p>
+            <div class="flex justify-center items-center space-x-6 mt-4">
+                <a href="#" class="text-white/80 hover:text-white transition-colors duration-300">LinkedIn</a>
+                <span class="text-white/30">/</span>
+                <a href="#" class="text-white/80 hover:text-white transition-colors duration-300">GitHub</a>
+                <span class="text-white/30">/</span>
+                <a href="#" class="text-white/80 hover:text-white transition-colors duration-300">Twitter</a>
+            </div>
+        </div>
+    </div>
+</section>
